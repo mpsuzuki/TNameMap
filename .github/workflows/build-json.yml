@@ -13,13 +13,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run TSV → JSON converter
+      - name: Run TSV → JSON → Lua converter
         run: |
           chmod +x tsv2json.js
+          chmod +x json2lua_dir.js
           ./tsv2json.js
+          ./json2lua_dir.js json lua
 
-      - name: Upload JSON artifacts
+      - name: Upload JSON + Lua artifacts
         uses: actions/upload-artifact@v4
         with:
           name: sat2018-sutra-names
-          path: json/
+          path: |
+            json/
+            lua/
