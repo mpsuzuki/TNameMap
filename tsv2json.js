@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const inputFile = "satdb2015.tsv";
+const inputFile = "satdb2018.tsv";
 
 const outDir = "json";
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
