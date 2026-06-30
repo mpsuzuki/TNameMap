@@ -71,6 +71,10 @@ async function main() {
   const obj = JSON5.parse(jsText);
   const folders = obj.children;
 
+  console.log([
+    "group", "volume", "title_volume",
+    "title_sutra", "T_number", "credits"
+  ].join("\t"))
   for (const group of obj.children) {
     const title_group = group.title;
     for (const volume of group.children) {
