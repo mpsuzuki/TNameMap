@@ -1,4 +1,4 @@
-#!/usr/bin/env nodejs
+#!/usr/bin/env node
 const JSON5 = require("json5");
 const { decodeEntities } = require("./mini_entities.js");
 function decodeAndTrim(s) {
